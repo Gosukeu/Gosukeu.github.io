@@ -1,0 +1,32 @@
+/* General Body Style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Navigation Links Style */
+.nav-link {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.nav-link:hover {
+    color: lightblue;
+}
