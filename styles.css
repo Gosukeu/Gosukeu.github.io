@@ -2,16 +2,17 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
+    background-color: white; /* Default background color is white */
+    color: black;
 }
 
-/* Navbar Container */
+/* Navbar Container - Black Background */
 .navbar {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-top: 20px;
+    background-color: black; /* Black background for the navbar */
+    padding: 20px 0; /* Adds padding for spacing */
 }
 
 /* Navigation Links Style */
@@ -33,7 +34,7 @@ body {
     position: relative;
 }
 
-/* Dropdown Content */
+/* Dropdown Content (Initially Hidden) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -57,7 +58,7 @@ body {
     background-color: lightblue;
 }
 
-/* Show dropdown on hover */
+/* Show dropdown when hovering over the parent element */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -89,4 +90,9 @@ body {
 /* Align the Third Image to the Right */
 .right {
     align-self: flex-end;
+}
+
+/* Make the rest of the page white */
+body > .images-section {
+    background-color: white;
 }
