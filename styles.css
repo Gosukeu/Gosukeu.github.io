@@ -5,18 +5,14 @@ body {
     color: black;  /* Default text color */
 }
 
-/* Background Colors */
-body.index-background {
+/* Index Page Only: Animated Gradient Background */
+.index-background {
     background: linear-gradient(45deg, #87CEEB, #A8DADC, #B0E0E6);  /* Chill blue gradient */
-    background-size: 400% 400%;  /* Make the gradient larger to show movement */
+    background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;  /* Animated gradient */
 }
 
-body.login-background {
-    background-color: #80C7E3;  /* Light blue background for login page */
-}
-
-/* Gradient Animation */
+/* Define the animation */
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -27,6 +23,11 @@ body.login-background {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* Login Page Static Background */
+body {
+    background-color: #80C7E3;  /* Light blue background for login */
 }
 
 /* Navbar Styles */
@@ -91,7 +92,7 @@ body.login-background {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;  /* Space between navbar and image */
+    margin-top: 40px;  /* Adds space between navbar and image */
     padding: 20px;
 }
 
