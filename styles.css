@@ -2,8 +2,23 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #87CEEB; /* Default background color is white */
+    background: linear-gradient(45deg, #87CEEB, #A8DADC, #B0E0E6);  /* Animated chill blue gradient */
+    background-size: 400% 400%;  /* Make the gradient larger to show movement */
+    animation: gradientAnimation 10s ease infinite;  /* Animation with a duration of 10s, ease timing function, and infinite loop */
     color: black;
+}
+
+/* Define the animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Navbar Container - Black Background */
@@ -80,16 +95,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
 }
 
-
-/* General Body Style */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #87CEEB;
-    color: black;
-    margin: 0;
-    padding: 0;
-}
-
 /* Login Page Container */
 .login-container {
     width: 300px;
@@ -135,4 +140,4 @@ button:hover {
     font-size: 0.9em;
     margin-top: 10px;
     color: red;
-} /* teste */
+}
