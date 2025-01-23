@@ -9,6 +9,9 @@ function validateLogin() {
     
     // Check if username is valid
     if (validUsernames.includes(username) && password === validPassword) {
+        // Store login status in sessionStorage
+        sessionStorage.setItem('loggedIn', 'true');
+        
         // Redirect to the main page or access page if successful
         window.location.href = 'index.html';  // Change to the page you want to redirect to
         return false; // Prevent form from submitting normally
