@@ -7,7 +7,7 @@ body {
 
 /* Index Page Only: Animated Gradient Background */
 .index-background {
-    background: linear-gradient(45deg, #87CEEB, #A8DADC, #B0E0E6);  /* Chill blue gradient */
+    background: linear-gradient(45deg, #00008B, #8B0000, #2E8B57);  /* Chill blue gradient */
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;  /* Animated gradient */
 }
