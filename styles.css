@@ -2,13 +2,21 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #87CEEB, #A8DADC, #B0E0E6);  /* Animated chill blue gradient */
-    background-size: 400% 400%;  /* Make the gradient larger to show movement */
-    animation: gradientAnimation 10s ease infinite;  /* Animation with a duration of 10s, ease timing function, and infinite loop */
-    color: black;
+    color: black;  /* Default text color */
 }
 
-/* Define the animation */
+/* Background Colors */
+body.index-background {
+    background: linear-gradient(45deg, #87CEEB, #A8DADC, #B0E0E6);  /* Chill blue gradient */
+    background-size: 400% 400%;  /* Make the gradient larger to show movement */
+    animation: gradientAnimation 10s ease infinite;  /* Animated gradient */
+}
+
+body.login-background {
+    background-color: #80C7E3;  /* Light blue background for login page */
+}
+
+/* Gradient Animation */
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -21,27 +29,27 @@ body {
     }
 }
 
-/* Navbar Container - Black Background */
+/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: black; /* Black background for the navbar */
-    padding: 20px 0; /* Adds padding for spacing */
+    background-color: black;  /* Navbar background color */
+    padding: 20px 0;  /* Space around navbar */
 }
 
-/* Navigation Links Style */
+/* Navigation Links */
 .nav-link {
-    color: white;
-    font-size: 2em;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: color 0.3s ease;
+    color: white;  /* Default link color */
+    font-size: 2em;  /* Font size for links */
+    text-decoration: none;  /* No underlines */
+    padding: 10px 20px;  /* Padding around the links */
+    transition: color 0.3s ease;  /* Smooth transition on hover */
 }
 
 /* Hover Effect for Links */
 .nav-link:hover {
-    color: lightblue;
+    color: lightblue;  /* Change to light blue on hover */
 }
 
 /* Dropdown Menu */
@@ -49,28 +57,28 @@ body {
     position: relative;
 }
 
-/* Dropdown Content (Initially Hidden) */
+/* Dropdown Content */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #333;  /* Dark background for dropdown */
     min-width: 160px;
     z-index: 1;
     border-radius: 5px;
 }
 
-/* Dropdown Items */
+/* Dropdown Item */
 .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
+    color: white;  /* Text color for dropdown items */
+    padding: 12px 16px;  /* Padding around dropdown items */
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
 }
 
-/* Hover effect for dropdown items */
+/* Hover Effect for Dropdown Items */
 .dropdown-content a:hover {
-    background-color: lightblue;
+    background-color: lightblue;  /* Change background on hover */
 }
 
 /* Show dropdown when hovering over the parent element */
@@ -83,16 +91,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px; /* Adds space between navbar and image */
+    margin-top: 40px;  /* Space between navbar and image */
     padding: 20px;
 }
 
 /* Style for Large Image */
 .large-image {
-    max-width: 90%; /* Adjusts the size of the image */
-    height: auto;   /* Keeps the aspect ratio */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+    max-width: 90%;  /* Controls the image size */
+    height: auto;    /* Keeps the image's aspect ratio */
+    border-radius: 10px;  /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: Adds a shadow effect */
 }
 
 /* Login Page Container */
@@ -102,8 +110,8 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #80C7E3;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #80C7E3;  /* Background color for the login page */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Optional: Shadow around login container */
 }
 
 /* Form Elements */
@@ -123,21 +131,22 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background-color: black;
-    color: white;
+    background-color: black;  /* Button background color */
+    color: white;  /* Button text color */
     border: none;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
 }
 
+/* Button Hover Effect */
 button:hover {
-    background-color: #333;
+    background-color: #333;  /* Darker background on hover */
 }
 
-/* Error message styling */
+/* Error Message Styling */
 #error-message {
     font-size: 0.9em;
     margin-top: 10px;
-    color: red;
+    color: red;  /* Error message color */
 }
