@@ -101,7 +101,7 @@ button {
     width: 100%;
     padding: 12px;
     background-color: #8B0000;  /* Green button */
-    color: #00008B;  /* White text */
+    color: #000000;  /* White text */
     border: none;
     border-radius: 5px;
     font-size: 1em;
@@ -111,7 +111,7 @@ button {
 
 /* Button Hover Effect */
 button:hover {
-    background-color: #45a049;  /* Darker green on hover */
+    background-color: #00008B;  /* Darker green on hover */
 }
 
 /* Error Message */
