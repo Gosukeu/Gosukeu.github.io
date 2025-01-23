@@ -100,8 +100,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #4CAF50;  /* Green button */
-    color: white;  /* White text */
+    background-color: #8B0000;  /* Green button */
+    color: #00008B;  /* White text */
     border: none;
     border-radius: 5px;
     font-size: 1em;
