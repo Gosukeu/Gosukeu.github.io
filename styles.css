@@ -63,36 +63,19 @@ body {
     display: block;
 }
 
-/* Section for Images at the Top */
-.images-section {
+/* Large Image Section Below Navbar */
+.image-section {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Adds space between navbar and image */
+    padding: 20px;
 }
 
-/* Style for Each Image */
-.image {
-    max-width: 150px;
-    max-height: 150px;
-}
-
-/* Align the First Image to the Left */
-.left {
-    align-self: flex-start;
-}
-
-/* Center the Second Image */
-.center {
-    align-self: center;
-}
-
-/* Align the Third Image to the Right */
-.right {
-    align-self: flex-end;
-}
-
-/* Make the rest of the page white */
-body > .images-section {
-    background-color: white;
+/* Style for Large Image */
+.large-image {
+    max-width: 90%; /* Adjusts the size of the image */
+    height: auto;   /* Keeps the aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
 }
