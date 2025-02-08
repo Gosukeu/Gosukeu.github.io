@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DS Emulator</title>
+    <link rel="stylesheet" href="emulator3DS.css">
+</head>
+<body class="index-background">
+    <!-- Check if user is logged in -->
+    <script>
+        if (sessionStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <div class="navbar">
+        <a href="index.html" class="home-button">🏠</a> 
+        <div class="navbar-item">
+            <a href="emulatorDS.html" class="nav-link">DS Emulator</a>
+        </div>
+        <div class="navbar-item">
+            <a href="emulatorSWITCH.html" class="nav-link">SWITCH Emulator</a>
+        </div>
+        <div class="navbar-item">
+            <a href="emulatorGBA.html" class="nav-link">GBA Emulator</a>
+        </div>
+    </div>
+
+    <!-- Image Container -->
+    <div class="image-container">
+        <div class="image-item">
+            <img src="images/3ds-left.jpg" alt="3DS Left Image" class="image-left">
+        </div>
+        <div class="image-item">
+            <div class="citra-text">CITRA</div>
+            <img src="images/3ds-middle.jpg" alt="3DS Middle Image" class="image-middle">
+            <!-- Scroll Button -->
+            <a href="#download-section" class="scroll-button">Go to Download</a>
+        </div>
+        <div class="image-item">
+            <img src="images/3ds-right.jpg" alt="3DS Right Image" class="image-right">
+        </div>
+    </div>
+
+    <!-- Download Section -->
+    <div id="download-section" class="download-section">
+        <h2>Download Section</h2>
+        <p>Choose your platform to download the emulator:</p>
+        <div class="download-buttons">
+            <div class="platform">
+                <h3>Windows</h3>
+                <a href="windows-link.zip" class="download-link">Download for Windows</a>
+            </div>
+            <div class="platform">
+                <h3>Mac</h3>
+                <a href="mac-link.zip" class="download-link">Download for Mac</a>
+            </div>
+            <div class="platform">
+                <h3>Linux</h3>
+                <a href="linux-link.zip" class="download-link">Download for Linux</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="page-footer">
+        <p>© 2025 My Pokémon Collection. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
