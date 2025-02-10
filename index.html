@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ROMs and Hacks</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to updated CSS -->
+</head>
+<body class="nintendo-style">
+
+    
+    <div class="navbar">
+        <div class="navbar-item dropdown">
+            <a href="#" class="nav-link">Emulator</a>
+            <div class="dropdown-content">
+                <a href="emulatorGBA.html">GBA</a>
+                <a href="emulatorDS.html">DS</a>
+                <a href="emulator3DS.html">3DS</a>
+                <a href="emulatorSWITCH.html">SWITCH</a>
+            </div>
+        </div>
+        <div class="navbar-item">
+            <a href="randomizer1-5.html" class="nav-link">Randomizer</a>
+        </div>
+        <div class="navbar-item dropdown">
+            <a href="#" class="nav-link">ROM/Hacks</a>
+            <div class="dropdown-content">
+                <a href="Rom-Hack_GBA.html">GBA</a>
+                <a href="Roms-Hack_DS.html">DS</a>
+                <a href="Roms-Hacks_3DS.html">3DS</a>
+                <a href="Roms-Hacks_SWITCH.html">SWITCH</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Search Bar below the Navbar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button">Search</button>
+    </div>
+
+    <!-- Hero Image Carousel -->
+    <div class="carousel">
+        <div class="carousel-images-wrapper">
+            <div class="carousel-images">
+                <!-- Images with links -->
+                <a href="page1.html">
+                    <img src="Pokémon_Black_Version.jpg" alt="Pokémon Black Version" class="carousel-image">
+                </a>
+                <a href="page2.html">
+                    <img src="POKEMON EMERALD .jpg" alt="Pokémon Emerald" class="carousel-image">
+                </a>
+                <a href="page3.html">
+                    <img src="POKEMON PLATINIUM.jpg" alt="Pokémon Platinum" class="carousel-image">
+                </a>
+                <a href="page4.html">
+                    <img src="blaze-black-2-volt-white-2-redux-custom-boxarts-v0-lxkekrwsxwuc1.jpg" alt="Blaze Black 2" class="carousel-image">
+                </a>
+                <a href="page5.html">
+                    <img src="images/image5.jpg" alt="Image 5" class="carousel-image">
+                </a>
+                <a href="page6.html">
+                    <img src="images/image6.jpg" alt="Image 6" class="carousel-image">
+                </a>
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Footer Styling -->
+    <footer class="footer">
+        <p>© 2025 My Pokémon Collection. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for carousel functionality -->
+    <script>
+        let slideIndex = 0;
+
+        // Function to move the slide by one step
+        function moveSlide(step) {
+            const images = document.querySelectorAll('.carousel-image');
+            slideIndex = (slideIndex + step + images.length) % images.length; // Loop through the images
+            updateCarousel();
+        }
+
+        // Function to update the carousel by changing the translateX value
+        function updateCarousel() {
+            const images = document.querySelectorAll('.carousel-image');
+            const offset = -slideIndex * 100; // Each image takes up 100% of the width
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+
+        // Initialize the carousel on page load
+        updateCarousel();
+    </script>
+
+</body>
+</html>

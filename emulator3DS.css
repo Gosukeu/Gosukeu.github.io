@@ -1,0 +1,207 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff; /* Clean white background */
+    color: #333; /* Dark text for readability */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar {
+    position: relative; /* Ensures positioning works correctly */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Keeps other items centered */
+    background: red;
+    padding: 20px;
+    border-bottom: 4px solid #ffffff; /* White border for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.home-button {
+    position: absolute;
+    left: 10px; /* Adjust this value to move it further left */
+    top: 50%;
+    transform: translateY(-50%); /* Keeps it vertically centered */
+    font-size: 22px;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.home-button:hover {
+    background: gray;
+}
+
+
+
+.navbar-item {
+    text-align: center;
+}
+
+.nav-link {
+    color: #ffffff; /* White text */
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3e07e2; /* Hover effect with red text */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+/* Image Container Styling */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.image-item {
+    width: 30%;
+    text-align: center;
+}
+
+.image-left, .image-middle, .image-right {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Stylish Text on the Middle Image */
+.citra-text {
+    font-size: 4em;
+    font-weight: bold;
+    color: #ea0a0a; /* White color for the text */
+    background: linear-gradient(45deg, #ff7f00, #ff0033); /* Orange to red gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Button Styling */
+.scroll-button {
+    display: inline-block;
+    background-color: #e60012; /* Nintendo Red */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 50px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-button:hover {
+    background-color: #f4c542; /* Subtle yellow on hover */
+    transform: scale(1.05);
+}
+
+/* Download Section Styling */
+#download-section {
+    margin-top: 100px;
+    padding: 100px 50px; /* Increased padding for a larger area */
+    background: linear-gradient(135deg, #e60012, #f93333); /* Vibrant red gradient */
+    color: #ffffff;
+    text-align: center;
+    border-radius: 20px; /* Softer, more modern edges */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+#download-section h2 {
+    font-size: 3em; /* Larger heading */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#download-section p {
+    font-size: 1.5em; /* Bigger text for readability */
+    margin-bottom: 30px;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.download-buttons a {
+    display: inline-block;
+    background-color: #ffffff; /* White button for contrast */
+    color: #e60012; /* Red text */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.download-buttons a:hover {
+    background-color: #e60012; /* Red background on hover */
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.1); /* Subtle zoom effect */
+}
+
+/* Footer Styling */
+.page-footer {
+    background-color: #333333; /* Dark footer */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+
+    .image-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .scroll-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    #download-section {
+        padding: 50px 20px; /* Reduced padding for smaller screens */
+    }
+
+    #download-section h2 {
+        font-size: 2em;
+    }
+
+    #download-section p {
+        font-size: 1.2em;
+    }
+
+    .download-buttons a {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}

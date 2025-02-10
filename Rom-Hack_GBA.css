@@ -1,0 +1,286 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 150vh; /* Makes the page significantly taller */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar {
+    position: relative; /* Ensures positioning works correctly */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Keeps other items centered */
+    background: red;
+    padding: 20px;
+    border-bottom: 4px solid #ffffff; /* White border for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.home-button {
+    position: absolute;
+    left: 10px; /* Adjust this value to move it further left */
+    top: 50%;
+    transform: translateY(-50%); /* Keeps it vertically centered */
+    font-size: 22px;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.home-button:hover {
+    background: gray;
+}
+
+.navbar .dropdown {
+    position: relative;
+    margin: 0 20px;
+}
+
+/* Navigation link styling */
+.nav-link {
+    text-decoration: none;
+    color: #ffffff; /* Nintendo red */
+    font-size: 1.4em;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    color: #3304bd; /* Hover effect with red text */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+/* Dropdown menu styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333; /* Dark grey dropdown */
+    min-width: 180px;
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Dropdown item styling */
+.dropdown-content a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #E60012; /* Red on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(10px); /* Smooth downward effect */
+}
+
+
+/* Button Styling */
+.scroll-button {
+    display: inline-block;
+    background-color: #e60012; /* Nintendo Red */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 50px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-button:hover {
+    background-color: #f4c542; /* Subtle yellow on hover */
+    transform: scale(1.05);
+}
+
+
+
+
+/* Search bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.search-bar {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #e60012;
+    border-radius: 20px;
+    width: 250px;
+    outline: none;
+    background-color: #f7f7f7;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #e60012;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* ROMs gallery */
+.title {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.game-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.game {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    height: 250px; /* Keeps size consistent */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+}
+
+.game:hover {
+    transform: scale(1.05);
+}
+
+.game img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 10px;
+    object-fit: cover; /* Keeps images looking good */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 15px;
+    background-color: #e60012;
+    color: white;
+}
+
+/* Search Bar Styling (Nintendo Style) */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px; /* Adds spacing between navbar and search bar */
+}
+
+.search-bar {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #e60012; /* Nintendo Red Border */
+    border-radius: 20px; /* Rounded corners for a more modern look */
+    width: 250px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    background-color: #f7f7f7; /* Light gray background */
+}
+
+/* Focus effect */
+.search-bar:focus {
+    border-color: #00bfff; /* Blue focus border */
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5); /* Soft blue glow */
+}
+
+/* Button Styling (Nintendo Red) */
+.search-button {
+    padding: 10px 20px;
+    background-color: #e60012; /* Nintendo Red */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Matching rounded corners */
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #d4000f; /* Slightly darker red on hover */
+}
+
+.search-button:active {
+    background-color: #c3000a; /* Even darker red when clicked */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+
+    .image-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .scroll-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    #download-section {
+        padding: 50px 20px; /* Reduced padding for smaller screens */
+    }
+
+    #download-section h2 {
+        font-size: 2em;
+    }
+
+    #download-section p {
+        font-size: 1.2em;
+    }
+
+    .download-buttons a {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
