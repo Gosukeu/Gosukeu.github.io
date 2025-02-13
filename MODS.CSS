@@ -1,0 +1,171 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff; /* Clean white background */
+    color: #333; /* Dark text for readability */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e60012; /* Nintendo Red */
+    padding: 20px 0;
+    border-bottom: 4px solid #ffffff; /* White border for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .dropdown {
+    position: relative;
+    margin: 0 20px;
+}
+
+/* Navigation link styling */
+.nav-link {
+    text-decoration: none;
+    color: #ffffff; /* Nintendo red */
+    font-size: 1.4em;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    color: #3304bd; /* Hover effect with red text */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+/* Dropdown menu styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333; /* Dark grey dropdown */
+    min-width: 180px;
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Dropdown item styling */
+.dropdown-content a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #E60012; /* Red on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(10px); /* Smooth downward effect */
+}
+
+/* Mods Page Styles */
+.mods-container {
+    max-width: 1200px;
+    margin: 100px auto 150px;
+    padding: 20px;
+}
+
+.section-title {
+    color: #e60012;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+}
+
+.mods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.mod-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 2px solid #e60012;
+}
+
+.mod-card:hover {
+    transform: translateY(-5px);
+}
+
+.mod-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #e60012;
+}
+
+.mod-info {
+    padding: 15px;
+    background: #f8f8f8;
+}
+
+.mod-info h3 {
+    color: #e60012;
+    margin: 0 0 10px;
+}
+
+.mod-info p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+    min-height: 60px;
+}
+
+.download-button {
+    background: #e60012;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+.download-button:hover {
+    background: #ff0015;
+    box-shadow: 0 2px 4px rgba(230,0,18,0.3);
+}
+
+
+/* Add to CSS */
+.mod-card::after {
+    content: 'NEW';
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    background: #ffcc00;
+    color: #e60012;
+    padding: 5px 25px;
+    transform: rotate(45deg);
+    font-weight: bold;
+    font-size: 0.8em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mod-card:hover::after {
+    opacity: 1;
+}

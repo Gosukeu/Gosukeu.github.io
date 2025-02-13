@@ -214,3 +214,86 @@ body {
         padding: 8px 18px;
     }
 }
+
+/* Mods Page Styles */
+.mods-container {
+    max-width: 1200px;
+    margin: 100px auto 150px;
+    padding: 20px;
+}
+
+.section-title {
+    color: #e60012;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+}
+
+.mods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.mod-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 2px solid #e60012;
+}
+
+.mod-card:hover {
+    transform: translateY(-5px);
+}
+
+.mod-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;  /* Ensures the entire image is visible */
+    border-bottom: 3px solid #e60012;
+    background-color: #fff;  /* Optional: fills extra space if aspect ratio doesn't match */
+}
+
+
+.mod-info {
+    padding: 15px;
+    background: #f8f8f8;
+}
+
+.mod-info h3 {
+    color: #e60012;
+    margin: 0 0 10px;
+}
+
+.mod-info p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+    min-height: 60px;
+}
+
+.download-button {
+    background: #e60012;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+.download-button:hover {
+    background: #ff0015;
+    box-shadow: 0 2px 4px rgba(230,0,18,0.3);
+}
+
+
+.mod-card:hover::after {
+    opacity: 1;
+}

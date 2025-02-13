@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My ROMs and Hacks</title>
     <link rel="stylesheet" href="index.css"> <!-- Link to updated CSS -->
+    <script>
+        // Immediately check if the user is logged in; if not, redirect to login.html
+        if (sessionStorage.getItem('loggedIn') !== 'true') {
+          window.location.href = 'login.html';
+        }
+      </script>
 </head>
 <body class="nintendo-style">
+
 
     
     <div class="navbar">
@@ -31,6 +38,16 @@
                 <a href="Roms-Hacks_SWITCH.html">SWITCH</a>
             </div>
         </div>
+        <!-- In your navbar div, add this after the ROM/Hacks section -->
+        <div class="navbar-item dropdown">
+           <a href="#" class="nav-link">Save Files</a>
+           <div class="dropdown-content">
+               <a href="SaveFileGBA.html">GBA</a>
+               <a href="SaveFileDS.html">DS</a>
+               <a href="SaveFile3DS.html">3DS</a>
+               <a href="SaveFileSWITCH.html">SWITCH</a>
+    </div>
+</div>
     </div>
     
 
